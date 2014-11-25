@@ -20,7 +20,11 @@ def problem1(below, multiples):
 	return sum(numbers)
 
 def problem2(below_limit):
-	return 19
+#	return 19
+	fibo = [1, 2, 3, 5, 8]
+	fibo_even  = [even for even in fibo if even % 2 == 0]
+	
+	return sum(fibo_even)
 
 if __name__ == '__main__':
 	print("Problem 1 : %d" %  problem1(1000, [3, 5]))
