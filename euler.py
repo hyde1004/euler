@@ -19,5 +19,8 @@ def problem1(below, multiples):
 		numbers = numbers | subset
 	return sum(numbers)
 
+def problem2(below_limit):
+	return 19
+
 if __name__ == '__main__':
 	print("Problem 1 : %d" %  problem1(1000, [3, 5]))
