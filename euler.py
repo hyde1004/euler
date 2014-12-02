@@ -33,6 +33,29 @@ def problem2(below_limit):
 
 	return sum(fibo_even)
 
+def isPrime(number):
+	for i in range(2, number):
+		if number % i == 0:
+			return False
+	else:
+		return True
+
+def problem3(number):
+	result = []
+	max_number = number
+	# for i in range(2, number+1):
+	# 	if number % i == 0 and isPrime(i) == True :
+	# 		result.append(i)
+
+	for i in range(2, number + 1):
+		if isPrime(i) == True and max_number % i == 0:
+			result.append(i)
+			max_number = max_number // i
+			print(str(i), end=' ')
+
+	return result
+
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
+	print("Problem 3 : %d" % max(problem3(600851475143)))
