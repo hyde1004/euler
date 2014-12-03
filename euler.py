@@ -51,11 +51,28 @@ def problem3(number):
 		if isPrime(i) == True and max_number % i == 0:
 			result.append(i)
 			max_number = max_number // i
-			print(str(i), end=' ')
+#			print(str(i), end=' ')
 
 	return result
+
+def isPalindrome(number):
+	return str(number) == str(number)[::-1]
+
+def problem4(digit):
+	palindrome = 0
+	start = 10 ** (digit - 1)
+	end = 10 ** digit
+	for a in range(start, end):
+		for b in range(start, end):
+			c = a * b
+			if isPalindrome(c) == True:
+				if c > palindrome:
+					palindrome = c 
+
+	return palindrome
 
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
-	print("Problem 3 : %d" % max(problem3(600851475143)))
+#	print("Problem 3 : %d" % max(problem3(600851475143)))
+	print("Problem 4 : %d" % problem4(3))
