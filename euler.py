@@ -71,7 +71,6 @@ def problem4(digit):
 
 	return palindrome
 
-
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
