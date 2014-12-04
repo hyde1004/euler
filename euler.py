@@ -71,8 +71,39 @@ def problem4(digit):
 
 	return palindrome
 
+def problem5(dividor_range):
+	smallest = 1
+
+	# while True:
+	# 	if smallest % 1 == 0 and smallest % 2 == 0 and smallest % 3 == 0 and smallest % 4 == 0 and smallest % 5 == 0 and smallest % 6 == 0 and smallest % 7 == 0 and smallest % 8 == 0 and smallest % 9 == 0 and smallest % 10 == 0 : 
+	# 		return smallest
+	# 	else:
+	# 		smallest = smallest + 1		
+
+	while True:
+		for i in range(1, dividor_range + 1):
+			if smallest % i != 0:
+				break
+		else:
+			return smallest
+		
+		smallest = smallest + 1
+
+	# """ Using least common multiple """
+	# if dividor_range == 10:
+	# 	smallest = (2**3) * (3**2) * 5 * 7
+	# else:
+	# 	smallest = (2**4) * (3**2) * 5 * 7 * 11 * 13 * 17 * 19
+
+	# return smallest
+
+
+
+
+
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
 #	print("Problem 3 : %d" % max(problem3(600851475143)))
 	print("Problem 4 : %d" % problem4(3))
+	print("Problem 5 : %d" % problem5(20))

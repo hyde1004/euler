@@ -26,5 +26,9 @@ class TestEuler(unittest.TestCase):
 	def test_problem4(self):
 		self.assertEqual(euler.problem4(2), (9009))
 
+	def test_problem5(self):
+		self.assertEqual(euler.problem5(10), 2520)
+		self.assertEqual(euler.problem5(20), 232792560)
+		
 if __name__ == '__main__':
 	unittest.main()
