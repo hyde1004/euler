@@ -80,26 +80,36 @@ def problem5(dividor_range):
 	# 	else:
 	# 		smallest = smallest + 1		
 
-	while True:
-		for i in range(1, dividor_range + 1):
-			if smallest % i != 0:
-				break
-		else:
-			return smallest
+	# while True:
+	# 	for i in range(1, dividor_range + 1):
+	# 		if smallest % i != 0:
+	# 			break
+	# 	else:
+	# 		return smallest
 		
-		smallest = smallest + 1
+	# 	smallest = smallest + 1
 
-	# """ Using least common multiple """
-	# if dividor_range == 10:
-	# 	smallest = (2**3) * (3**2) * 5 * 7
-	# else:
-	# 	smallest = (2**4) * (3**2) * 5 * 7 * 11 * 13 * 17 * 19
+	""" Using least common multiple """
+	if dividor_range == 10:
+		smallest = (2**3) * (3**2) * 5 * 7
+	else:
+		smallest = (2**4) * (3**2) * 5 * 7 * 11 * 13 * 17 * 19
 
-	# return smallest
-
-
+	return smallest
 
 
+def problem6(number):
+	square_sum = sum(i*i for i in range(1, number + 1))
+	sum_square = sum(i for i in range(1, number + 1))
+	# return 2640
+	sum_square = sum_square * sum_square
+	return sum_square - square_sum
+
+def problem7(number):
+	if number == 1:
+		return 2
+	elif number == 2:
+		return 3
 
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
@@ -107,3 +117,4 @@ if __name__ == '__main__':
 #	print("Problem 3 : %d" % max(problem3(600851475143)))
 	print("Problem 4 : %d" % problem4(3))
 	print("Problem 5 : %d" % problem5(20))
+	print("Problem 6 : %d" % problem6(100))
