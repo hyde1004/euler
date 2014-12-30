@@ -16,7 +16,8 @@ class TestEuler(unittest.TestCase):
 		self.assertEqual(euler.problem3(4), [2])
 		self.assertEqual(euler.problem3(6), [2, 3])
 		self.assertEqual(euler.problem3(13195), [5, 7, 13, 29])
-
+		self.assertEqual(euler.problem3(600851475143), [71, 839, 1471, 6857])
+		
 	def test_isPrime(self):
 		self.assertEqual(euler.isPrime(2), True)
 		self.assertEqual(euler.isPrime(3), True)

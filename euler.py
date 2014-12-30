@@ -74,16 +74,28 @@ def problem3(number):
 	# if b == 1:
 	# 	return c
 
+	# result = []
+	# a = number
+	# b = prime_numbers(number)
+	# i = 0
+
+	# while(a != 1):
+	# 	if (a % b[i] == 0):
+	# 		result.append(b[i])
+	# 		while(a % b[i] == 0):
+	# 			a = a // b[i]
+	# 	i = i + 1
+	# return result
+
 	result = []
 	a = number
-	b = prime_numbers(number)
-	i = 0
+	i = 2
 
 	while(a != 1):
-		if (a % b[i] == 0):
-			result.append(b[i])
-			while(a % b[i] == 0):
-				a = a // b[i]
+		if (a % i == 0 and isPrime(i) == True):
+			result.append(i)
+			while(a % i == 0):
+				a = a // i
 		i = i + 1
 	return result
 
@@ -186,7 +198,7 @@ def prime_numbers(number):
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
-	# print("Problem 3 : %d" % max(problem3(600851475143)))
+	print("Problem 3 : %d" % max(problem3(600851475143)))
 	print("Problem 4 : %d" % problem4(3))
 	print("Problem 5 : %d" % problem5(20))
 	print("Problem 6 : %d" % problem6(100))
