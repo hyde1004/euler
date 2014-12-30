@@ -1,3 +1,5 @@
+import math
+
 def problem1(below, multiples):
 	# return 23
 
@@ -110,6 +112,46 @@ def problem7(number):
 		return 2
 	elif number == 2:
 		return 3
+def prime_numbers(number):
+	# if number == 2:
+	# 	return [2]
+	# elif number == 3:
+	# 	return [3]
+	# elif number == 4:
+	# 	return [2, 3]
+	
+
+	a = [x for x in range(2, number+1)]
+
+	# c = a[0]	
+	# b = [x for x in range(c*2, number+1, c)]
+	# for x in b:
+	# 	if x in a:
+	# 		a.remove(x)
+	
+	# c = a[1]
+	# b = [x for x in range(c*2, number+1, c)]
+	# for x in b:
+	# 	if x in a:
+	# 		a.remove(x)
+
+	# c = a[2]
+	# b = [x for x in range(c*2, number+1, c)]
+	# for x in b:
+	# 	if x in a:
+	# 		a.remove(x)
+
+	i = 0
+	
+	c = a[i]
+	while c <= math.floor(number**0.5):
+		b = [x for x in range(c*2, number+1, c)]
+		for x in b:
+			if x in a:
+				a.remove(x)
+		i = i+1
+		c = a[i]
+	return a		
 
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
