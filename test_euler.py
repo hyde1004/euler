@@ -9,12 +9,13 @@ class TestEuler(unittest.TestCase):
 	def test_problem2(self):
 		self.assertEqual(euler.problem2(10), 10)
 
+	#@unittest.skip("demonstrating skipping")
 	def test_problem3(self):
 		self.assertEqual(euler.problem3(2), [2])
 		self.assertEqual(euler.problem3(3), [3])
 		self.assertEqual(euler.problem3(4), [2])
 		self.assertEqual(euler.problem3(6), [2, 3])
-#		self.assertEqual(euler.problem3(13195), [5, 7, 13, 29])
+		self.assertEqual(euler.problem3(13195), [5, 7, 13, 29])
 
 	def test_isPrime(self):
 		self.assertEqual(euler.isPrime(2), True)

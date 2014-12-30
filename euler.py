@@ -43,18 +43,48 @@ def isPrime(number):
 		return True
 
 def problem3(number):
+# 	result = []
+# 	max_number = number
+# 	# for i in range(2, number+1):
+# 	# 	if number % i == 0 and isPrime(i) == True :
+# 	# 		result.append(i)
+
+# 	for i in range(2, number + 1):
+# 		if isPrime(i) == True and max_number % i == 0:
+# 			result.append(i)
+# 			max_number = max_number // i
+# #			print(str(i), end=' ')
+
+	# c = []
+	# a = prime_numbers(number)
+	# b = number
+
+	# if b % a[2] == 0:
+	# 	c.append(a[2])
+	# 	b = b // a[2]	
+
+	# if b % a[3] == 0:
+	# 	c.append(a[3])
+	# 	b = b // a[3]	
+
+	# if b % a[4] == 0:
+	# 	c.append(a[4])
+	# 	b = b // a[4]	
+
+	# if b == 1:
+	# 	return c
+
 	result = []
-	max_number = number
-	# for i in range(2, number+1):
-	# 	if number % i == 0 and isPrime(i) == True :
-	# 		result.append(i)
+	a = number
+	b = prime_numbers(number)
+	i = 0
 
-	for i in range(2, number + 1):
-		if isPrime(i) == True and max_number % i == 0:
-			result.append(i)
-			max_number = max_number // i
-#			print(str(i), end=' ')
-
+	while(a != 1):
+		if (a % b[i] == 0):
+			result.append(b[i])
+			while(a % b[i] == 0):
+				a = a // b[i]
+		i = i + 1
 	return result
 
 def isPalindrome(number):
@@ -156,7 +186,7 @@ def prime_numbers(number):
 if __name__ == '__main__':
 	print("Problem 1 : %d" % problem1(1000, [3, 5]))
 	print("Problem 2 : %d" % problem2(4000000))
-#	print("Problem 3 : %d" % max(problem3(600851475143)))
+	# print("Problem 3 : %d" % max(problem3(600851475143)))
 	print("Problem 4 : %d" % problem4(3))
 	print("Problem 5 : %d" % problem5(20))
 	print("Problem 6 : %d" % problem6(100))
